@@ -11,9 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151028222024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fuel_authors", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.text     "bio"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "dribbble"
+    t.date     "start_date"
+  end
+
+  create_table "fuel_posts", force: :cascade do |t|
+    t.string   "tag"
+    t.string   "author"
+    t.text     "content"
+    t.string   "title"
+    t.string   "slug"
+    t.boolean  "published",                   default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "featured_image_url"
+    t.text     "teaser"
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
+    t.integer  "featured_image_file_size"
+    t.datetime "featured_image_updated_at"
+    t.string   "seo_title"
+    t.text     "seo_description"
+    t.integer  "author_id"
+    t.datetime "published_at"
+    t.string   "format",                      default: "html"
+  end
+
+  add_index "fuel_posts", ["slug"], name: "index_fuel_posts_on_slug", unique: true, using: :btree
 
 end
