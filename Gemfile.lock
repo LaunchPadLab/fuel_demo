@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/launchpadlab/fuel.git
-  revision: 60e0fafdce424afb9f3a03d99aa9254b5947a157
+  revision: 12a2e7c318ae6f5b5f2ae1bf06a834c5fe94f822
   branch: master
   specs:
-    fuel (0.4.1)
+    fuel (0.4.2)
       aws-sdk (< 2.0)
       bourbon
       friendly_id
@@ -14,10 +14,11 @@ GIT
       neat
       paperclip (>= 3)
       pickadate-rails
-      rails
+      rails (>= 3)
       redcarpet
       rouge
       sass-rails
+      sass_rails_patch (~> 0.0.1)
       truncate_html
 
 GEM
@@ -238,13 +239,14 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sass_rails_patch (0.0.2)
+      sass-rails
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shoulda-matchers (3.0.1)
       activesupport (>= 4.0.0)
     slop (3.6.0)
-    spring (1.4.0)
     sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
@@ -303,7 +305,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers (~> 3.0)
-  spring
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
