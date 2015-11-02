@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/launchpadlab/fuel.git
-  revision: 12a2e7c318ae6f5b5f2ae1bf06a834c5fe94f822
+  revision: 042917213972a05b4f9f97487a3f4e4760c79b5c
   branch: master
   specs:
-    fuel (0.4.2)
+    fuel (0.4.3)
       aws-sdk (< 2.0)
       bourbon
       friendly_id
